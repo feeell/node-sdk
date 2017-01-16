@@ -112,7 +112,7 @@ DocumentConversionV1.prototype.convert = function(params, callback) {
     parameters.options.formData = {
       file: params.file,
       config: {
-        value: JSON.stringify(omit(params,['file', 'content_type'])),
+        value: JSON.stringify(params.config),
         options: {
           contentType: 'application/json; charset=utf-8'
         }
